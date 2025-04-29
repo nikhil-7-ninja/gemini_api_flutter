@@ -1,5 +1,4 @@
 .dart_tool/
 build/
-example/
 .idea/
 *.iml
