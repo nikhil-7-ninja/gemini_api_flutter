@@ -92,4 +92,4 @@ export 'src/function_calling.dart'
         SchemaType,
         Tool,
         ToolConfig;
-export 'src/model.dart' show RequestOptions;
+export 'src/model.dart' show RequestOptions,GeminiApiModel;
