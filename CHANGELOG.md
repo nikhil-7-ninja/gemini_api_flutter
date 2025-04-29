@@ -1,7 +1,6 @@
 # Changelog
 
-## [0.0.4] - 2025-04-29
+## [0.0.5] - 2025-04-29
 ### Added
-- Improved error handling
-- Updated pubspec metadata
-- Formatted source files to meet Dart style guide
+- Adding GeminiApiModel For Direct Call
+- Adding Open source Example
