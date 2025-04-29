@@ -75,12 +75,7 @@ export 'src/content.dart'
         Part,
         TextPart;
 export 'src/error.dart'
-    show
-        GenerativeAIException,
-        GenerativeAISdkException,
-        InvalidApiKey,
-        ServerException,
-        UnsupportedUserLocation;
+    show GenerativeAIException, GenerativeAISdkException, InvalidApiKey, ServerException, UnsupportedUserLocation;
 export 'src/function_calling.dart'
     show
         CodeExecution,
@@ -92,4 +87,4 @@ export 'src/function_calling.dart'
         SchemaType,
         Tool,
         ToolConfig;
-export 'src/model.dart' show RequestOptions,GeminiApiModel;
+export 'src/model.dart' show RequestOptions, GeminiApiModel;
