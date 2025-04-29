@@ -1,9 +1,9 @@
 name: gemini_api_flutter
 description: "A Flutter package that simplifies interacting with the Gemini API, enabling content generation, chat, and multimodal AI capabilities in your apps."
-version: 0.0.3
-homepage: https://github.com/nik007frontbit/gemini_api_flutter
-repository: https://github.com/nik007frontbit/gemini_api_flutter
-issue_tracker: https://github.com/nik007frontbit/gemini_api_flutter/issues
+version: 0.0.4
+homepage: https://github.com/nikhil-7-ninja/gemini_api_flutter
+repository: https://github.com/nikhil-7-ninja/gemini_api_flutter
+issue_tracker: https://github.com/nikhil-7-ninja/gemini_api_flutter/issues
 environment:
   sdk: ^3.5.0
   flutter: ">=1.17.0"
