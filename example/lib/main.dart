@@ -77,10 +77,8 @@ Respond in structured JSON with an array of objects containing:
           responseSchema: Schema.array(
             items: Schema.object(
               properties: {
-                "Scene": Schema.string(
-                    description: "Detailed visualization of the scene."),
-                "Voice": Schema.string(
-                    description: "Voice-over matching the scene action."),
+                "Scene": Schema.string(description: "Detailed visualization of the scene."),
+                "Voice": Schema.string(description: "Voice-over matching the scene action."),
               },
             ),
           ),
@@ -97,11 +95,9 @@ Respond in structured JSON with an array of objects containing:
           if (decodedJson is List) {
             setState(() {
               storyList = List<Map<String, String>>.from(decodedJson.map(
-                    (item) => {
-                  "Scene":
-                  (item["Scene"] ?? '').toString().replaceAll('\n', ' '),
-                  "Voice":
-                  (item["Voice"] ?? '').toString().replaceAll('\n', ' '),
+                (item) => {
+                  "Scene": (item["Scene"] ?? '').toString().replaceAll('\n', ' '),
+                  "Voice": (item["Voice"] ?? '').toString().replaceAll('\n', ' '),
                 },
               ));
             });
@@ -129,24 +125,24 @@ Respond in structured JSON with an array of objects containing:
       body: isLoading
           ? const Center(child: CircularProgressIndicator()) // Show loading
           : storyList.isEmpty
-          ? const Center(child: Text('Press the button to create a story!'))
-          : ListView.builder(
-        itemCount: storyList.length,
-        padding: const EdgeInsets.all(16),
-        itemBuilder: (context, index) {
-          final story = storyList[index];
-          return Card(
-            margin: const EdgeInsets.symmetric(vertical: 8),
-            child: ListTile(
-              title: Text(
-                story['Scene'] ?? '',
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(story['Voice'] ?? ''),
-            ),
-          );
-        },
-      ),
+              ? const Center(child: Text('Press the button to create a story!'))
+              : ListView.builder(
+                  itemCount: storyList.length,
+                  padding: const EdgeInsets.all(16),
+                  itemBuilder: (context, index) {
+                    final story = storyList[index];
+                    return Card(
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      child: ListTile(
+                        title: Text(
+                          story['Scene'] ?? '',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(story['Voice'] ?? ''),
+                      ),
+                    );
+                  },
+                ),
       floatingActionButton: FloatingActionButton(
         onPressed: generateStory, // Generate story on press
         tooltip: 'Generate Story',
