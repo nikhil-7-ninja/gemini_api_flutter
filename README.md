@@ -15,4 +15,4 @@ To use this package, add `gemini_api_flutter` as a dependency in your `pubspec.y
 
 ```yaml
 dependencies:
-  gemini_api_flutter: ^0.0.5
+  gemini_api_flutter: ^0.0.6
